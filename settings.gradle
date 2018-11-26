@@ -1,1 +1,1 @@
-include ':MidiTools', ':MidiKeyboard', ':MidiScope', ':MidiSynthExample', ':MidiBtlePairing'
+include ':MidiTools', ':MidiKeyboard'

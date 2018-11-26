@@ -16,21 +16,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="4dp"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/text_version"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/versionName"
-            android:layout_marginRight="20dp"
-            />
 
         <TextView
             android:id="@+id/text_receivers"
@@ -40,16 +33,34 @@
 
         <Spinner
             android:id="@+id/spinner_receivers"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:entries="@array/receivers" />
+
+        <TextView
+            android:id="@+id/text_velocity_short"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/velocity_short_text" />
+
+        <SeekBar
+            android:id="@+id/seekBar_velocity"
+            style="@android:style/Widget.Material.SeekBar"
+            android:layout_width="wrap_content"
+            android:minHeight="25dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="127"
+            android:progress="100" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/text_channels"
@@ -64,54 +75,83 @@
             android:entries="@array/channels" />
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="0.7">
 
-            <TextView
-                android:id="@+id/text_program_prompt"
+            <Spinner
+                android:id="@+id/spinner_programs"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:text="@string/program_text" />
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:entries="@array/programs" />
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
-                android:onClick="onProgramDelta"
-                android:text="-10" />
+                android:onClick="onOctaveDown"
+                android:text="Oct-" />
 
             <Button
+                android:id="@+id/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
-                android:onClick="onProgramDelta"
-                android:text="-1" />
+                android:onClick="onOctaveUp"
+                android:text="Oct+" />
 
-            <Button
-                android:id="@+id/button_program"
+            <ToggleButton
+                android:id="@+id/button_sustain"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:onClick="onProgramSend"
-                android:text="0" />
+                android:layout_height="match_parent"
+                android:layout_weight="0.23"
+                android:checked="false"
+                android:text="ToggleButton"
+                android:textOff="Sustain Off"
+                android:textOn="Sustain On" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:onClick="onProgramDelta"
-                android:text="+1" />
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:onClick="onProgramDelta"
-                android:text="+10" />
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_pitchbend"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/pitchbend_text" />
+
+        <SeekBar
+            android:id="@+id/seekBar_pitchBend"
+            style="@android:style/Widget.Material.SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:max="16383"
+            android:progress="8192" />
+
+        <TextView
+            android:id="@+id/text_modulation"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/modulation_text" />
+
+        <SeekBar
+            android:id="@+id/seekBar_modulation"
+            style="@android:style/Widget.Material.SeekBar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:max="127"
+            android:progress="0" />
 
     </LinearLayout>
 
@@ -119,6 +159,6 @@
         android:id="@+id/musicKeyboardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>

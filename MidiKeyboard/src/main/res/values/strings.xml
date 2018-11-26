@@ -16,15 +16,20 @@
 
 <resources>
 
-    <string name="app_name">MIDIKeyboard</string>
+    <string name="app_name">MIDI Keyboard</string>
     <string name="about_app">MIDI Keyboard View</string>
     <string name="title_activity_synth_setup">MIDI Keyboard</string>
-
     <string name="receivers_text">Receivers for Keys: </string>
+    <string name="channel_text">Channel:</string>
+    <string name="pitchbend_text">Pitch Bend:</string>
+    <string name="modulation_text">Modulation:</string>
+    <string name="velocity_text">Velocity:</string>
+    <string name="velocity_short_text">Vel.:</string>
+
     <string-array name="receivers">
         <item>"none"</item>
     </string-array>
-    <string name="channel_text">Channel:</string>
+
     <string-array name="channels">
         <item>"1"</item>
         <item>"2"</item>
@@ -35,7 +40,7 @@
         <item>"7"</item>
         <item>"8"</item>
         <item>"9"</item>
-        <item>"10"</item>
+        <item>"10 (Drums)"</item>
         <item>"11"</item>
         <item>"12"</item>
         <item>"13"</item>
@@ -44,6 +49,266 @@
         <item>"16"</item>
     </string-array>
 
-    <string name="program_text">Program:</string>
+    <string-array name="programs">
+        <item>"000 Acoustic Grand Piano"</item>
+        <item>"001 Bright Acoustic Piano"</item>
+        <item>"002 Electric grand Piano"</item>
+        <item>"003 Honky Tonk Piano"</item>
+        <item>"004 Electric Piano 1"</item>
+        <item>"005 Electric Piano 2"</item>
+        <item>"006 Harpsichord"</item>
+        <item>"007 Clavinet"</item>
+        <item>"008 Celesta"</item>
+        <item>"009 Glockenspiel"</item>
+        <item>"010 Music Box"</item>
+        <item>"011 Vibraphone"</item>
+        <item>"012 Marimba"</item>
+        <item>"013 Xylophone"</item>
+        <item>"014 Tubular bells"</item>
+        <item>"015 Dulcimer"</item>
+        <item>"016 Drawbar Organ"</item>
+        <item>"017 Percussive Organ"</item>
+        <item>"018 Rock Organ"</item>
+        <item>"019 Church Organ"</item>
+        <item>"020 Reed Organ"</item>
+        <item>"021 Accordion"</item>
+        <item>"022 Harmonica"</item>
+        <item>"023 Tango Accordion"</item>
+        <item>"024 Nylon Acoustic Guitar"</item>
+        <item>"025 Steel Acoustic Guitar"</item>
+        <item>"026 Jazz Electric Guitar"</item>
+        <item>"027 Clean Electric Guitar"</item>
+        <item>"028 Muted Electric Guitar"</item>
+        <item>"029 Overdrive Guitar"</item>
+        <item>"030 Distorted Guitar"</item>
+        <item>"031 Guitar Harmonics"</item>
+        <item>"032 Acoustic Bass"</item>
+        <item>"033 Fingered Bass"</item>
+        <item>"034 Picked Bass"</item>
+        <item>"035 Fretless Bass"</item>
+        <item>"036 Slap Bass 1"</item>
+        <item>"037 Slap Bass 2"</item>
+        <item>"038 Syn Bass 1"</item>
+        <item>"039 Syn Bass 2"</item>
+        <item>"040 Violin"</item>
+        <item>"041 Viola"</item>
+        <item>"042 Cello"</item>
+        <item>"043 Contrabass"</item>
+        <item>"044 Tremolo Strings"</item>
+        <item>"045 Pizzicato Strings"</item>
+        <item>"046 Orchestral Harp"</item>
+        <item>"047 Timpani"</item>
+        <item>"048 String Ensemble"</item>
+        <item>"049 Slow String Ensemble"</item>
+        <item>"050 Syn Strings 1"</item>
+        <item>"051 Syn Strings 2"</item>
+        <item>"052 Choir Aahs"</item>
+        <item>"053 Voice Oohs"</item>
+        <item>"054 Syn Choir"</item>
+        <item>"055 Orchestral Hit"</item>
+        <item>"056 Trumpet"</item>
+        <item>"057 Trombone"</item>
+        <item>"058 Tuba"</item>
+        <item>"059 Muted Trumpet"</item>
+        <item>"060 French Horn"</item>
+        <item>"061 Brass Section"</item>
+        <item>"062 Syn Brass 1"</item>
+        <item>"063 Syn Brass 2"</item>
+        <item>"064 Soprano Sax"</item>
+        <item>"065 Alto Sax"</item>
+        <item>"066 Tenor Sax"</item>
+        <item>"067 Baritone Sax"</item>
+        <item>"068 Oboe"</item>
+        <item>"069 English Horn"</item>
+        <item>"070 Bassoon"</item>
+        <item>"071 Clarinet"</item>
+        <item>"072 Piccolo"</item>
+        <item>"073 Flute"</item>
+        <item>"074 Recorder"</item>
+        <item>"075 Pan Flute"</item>
+        <item>"076 Bottle Blow"</item>
+        <item>"077 Shakuhachi"</item>
+        <item>"078 Whistle"</item>
+        <item>"079 Ocarina"</item>
+        <item>"080 Syn Square Wave"</item>
+        <item>"081 Syn Sawtooth Wave"</item>
+        <item>"082 Syn Calliope"</item>
+        <item>"083 Syn Chiff"</item>
+        <item>"084 Syn Charang"</item>
+        <item>"085 Syn Voice"</item>
+        <item>"086 Syn 5th Saw Wave"</item>
+        <item>"087 Syn Brass/Lead"</item>
+        <item>"088 New Age Syn Pad"</item>
+        <item>"089 Warm Syn Pad"</item>
+        <item>"090 Polysynth Syn Pad"</item>
+        <item>"091 Choir Syn Pad"</item>
+        <item>"092 Bowed Syn Pad"</item>
+        <item>"093 Metal Syn Pad"</item>
+        <item>"094 Halo Syn Pad"</item>
+        <item>"095 Sweep Syn Pad"</item>
+        <item>"096 SFX Rain"</item>
+        <item>"097 SFX Soundtrack"</item>
+        <item>"098 SFX Crystal"</item>
+        <item>"099 SFX Atmosphere"</item>
+        <item>"100 SFX Brightness"</item>
+        <item>"101 SFX Goblins"</item>
+        <item>"102 SFX Echoes"</item>
+        <item>"103 SFX Sci-fi"</item>
+        <item>"104 Sitar"</item>
+        <item>"105 Banjo"</item>
+        <item>"106 Shamisen"</item>
+        <item>"107 Koto"</item>
+        <item>"108 Kalimba"</item>
+        <item>"109 Bag Pipe"</item>
+        <item>"110 Fiddle"</item>
+        <item>"111 Shanai"</item>
+        <item>"112 Tinkle Bell"</item>
+        <item>"113 Agogo"</item>
+        <item>"114 Steel Drums"</item>
+        <item>"115 Woodblock"</item>
+        <item>"116 Taiko Drum"</item>
+        <item>"117 Melodic Tom"</item>
+        <item>"118 Syn Drum"</item>
+        <item>"119 Reverse Cymbal"</item>
+        <item>"120 Guitar Fret Noise"</item>
+        <item>"121 Breath Noise"</item>
+        <item>"122 Seashore"</item>
+        <item>"123 Bird Tweet"</item>
+        <item>"124 Telephone Ring"</item>
+        <item>"125 Helicopter"</item>
+        <item>"126 Applause"</item>
+        <item>"127 Gun Shot"</item>
+    </string-array>
+
+    <string-array name="drumprograms">
+        <item>"000 Drums GM Standard"</item>
+        <item>"001 --- "</item>
+        <item>"002 --- "</item>
+        <item>"003 --- "</item>
+        <item>"004 --- "</item>
+        <item>"005 --- "</item>
+        <item>"006 --- "</item>
+        <item>"007 --- "</item>
+        <item>"008 Drums GS Room"</item>
+        <item>"009 --- "</item>
+        <item>"010 --- "</item>
+        <item>"011 --- "</item>
+        <item>"012 --- "</item>
+        <item>"013 --- "</item>
+        <item>"014 --- "</item>
+        <item>"015 --- "</item>
+        <item>"016 Drums GS Power"</item>
+        <item>"017 --- "</item>
+        <item>"018 --- "</item>
+        <item>"019 --- "</item>
+        <item>"020 --- "</item>
+        <item>"021 --- "</item>
+        <item>"022 --- "</item>
+        <item>"023 --- "</item>
+        <item>"024 Drums GS Electronic"</item>
+        <item>"025 Drums GS Analog"</item>
+        <item>"026 --- "</item>
+        <item>"027 --- "</item>
+        <item>"028 --- "</item>
+        <item>"029 --- "</item>
+        <item>"030 --- "</item>
+        <item>"031 --- "</item>
+        <item>"032 Drums GS Jazz"</item>
+        <item>"033 --- "</item>
+        <item>"034 --- "</item>
+        <item>"035 --- "</item>
+        <item>"036 --- "</item>
+        <item>"037 --- "</item>
+        <item>"038 --- "</item>
+        <item>"039 --- "</item>
+        <item>"040 Drums GS Brush"</item>
+        <item>"041 --- "</item>
+        <item>"042 --- "</item>
+        <item>"043 --- "</item>
+        <item>"044 --- "</item>
+        <item>"045 --- "</item>
+        <item>"046 --- "</item>
+        <item>"047 --- "</item>
+        <item>"048 Drums GS Orchestra"</item>
+        <item>"049 --- "</item>
+        <item>"050 --- "</item>
+        <item>"051 --- "</item>
+        <item>"052 --- "</item>
+        <item>"053 --- "</item>
+        <item>"054 --- "</item>
+        <item>"055 --- "</item>
+        <item>"056 Drums GS SFX"</item>
+        <item>"057 --- "</item>
+        <item>"058 --- "</item>
+        <item>"059 --- "</item>
+        <item>"060 --- "</item>
+        <item>"061 --- "</item>
+        <item>"062 --- "</item>
+        <item>"063 --- "</item>
+        <item>"064 --- "</item>
+        <item>"065 --- "</item>
+        <item>"066 --- "</item>
+        <item>"067 --- "</item>
+        <item>"068 --- "</item>
+        <item>"069 --- "</item>
+        <item>"070 --- "</item>
+        <item>"071 --- "</item>
+        <item>"072 --- "</item>
+        <item>"073 --- "</item>
+        <item>"074 --- "</item>
+        <item>"075 --- "</item>
+        <item>"076 --- "</item>
+        <item>"077 --- "</item>
+        <item>"078 --- "</item>
+        <item>"079 --- "</item>
+        <item>"080 --- "</item>
+        <item>"081 --- "</item>
+        <item>"082 --- "</item>
+        <item>"083 --- "</item>
+        <item>"084 --- "</item>
+        <item>"085 --- "</item>
+        <item>"086 --- "</item>
+        <item>"087 --- "</item>
+        <item>"088 --- "</item>
+        <item>"089 --- "</item>
+        <item>"090 --- "</item>
+        <item>"091 --- "</item>
+        <item>"092 --- "</item>
+        <item>"093 --- "</item>
+        <item>"094 --- "</item>
+        <item>"095 --- "</item>
+        <item>"096 --- "</item>
+        <item>"097 --- "</item>
+        <item>"098 --- "</item>
+        <item>"099 --- "</item>
+        <item>"100 --- "</item>
+        <item>"101 --- "</item>
+        <item>"102 --- "</item>
+        <item>"103 --- "</item>
+        <item>"104 --- "</item>
+        <item>"105 --- "</item>
+        <item>"106 --- "</item>
+        <item>"107 --- "</item>
+        <item>"108 --- "</item>
+        <item>"109 --- "</item>
+        <item>"110 --- "</item>
+        <item>"111 --- "</item>
+        <item>"112 --- "</item>
+        <item>"113 --- "</item>
+        <item>"114 --- "</item>
+        <item>"115 --- "</item>
+        <item>"116 --- "</item>
+        <item>"117 --- "</item>
+        <item>"118 --- "</item>
+        <item>"119 --- "</item>
+        <item>"120 --- "</item>
+        <item>"121 --- "</item>
+        <item>"122 --- "</item>
+        <item>"123 --- "</item>
+        <item>"124 --- "</item>
+        <item>"125 --- "</item>
+        <item>"126 --- "</item>
+        <item>"127 Drums CM-64/32"</item>
+    </string-array>
 
 </resources>

@@ -1,31 +1,39 @@
 apply plugin: 'com.android.application'
 
 def versionMajor = 1
-def versionMinor = 3
+def versionMinor = 0
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
-
+    signingConfigs {
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId "com.mobileer.midikeyboard"
+        applicationId "com.falcosoft.midikeyboard"
         minSdkVersion 23
-        targetSdkVersion 23
-        versionCode 4
+        targetSdkVersion 28
+        versionCode 5
         versionName "${versionMajor}.${versionMinor}"
 
         resValue "string", "versionName", "${defaultConfig.versionName}"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    productFlavors {
     }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:25.0.1'
     compile project(':MidiTools')
 }

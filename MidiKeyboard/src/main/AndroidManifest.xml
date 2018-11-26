@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mobileer.midikeyboard">
+    package="com.falcosoft.midikeyboard">
 
     <uses-feature
         android:name="android.software.leanback"
@@ -9,7 +9,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher">
-        <activity android:name="com.mobileer.midikeyboard.MainActivity" android:label="MIDI Keyboard">
+        <activity android:name="com.falcosoft.midikeyboard.MainActivity" android:theme="@style/AppTheme" android:label="MIDI Keyboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />

@@ -95,10 +95,10 @@ public class MusicKeyboardView extends View {
     /** Implement this to receive keyboard events. */
     public interface MusicKeyListener {
         /** This will be called when a key is pressed. */
-        public void onKeyDown(int keyIndex);
+        void onKeyDown(int keyIndex);
 
         /** This will be called when a key is pressed. */
-        public void onKeyUp(int keyIndex);
+        void onKeyUp(int keyIndex);
     }
 
     public MusicKeyboardView(Context context, AttributeSet attrs) {
@@ -133,7 +133,7 @@ public class MusicKeyboardView extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         mWidth = w;
         mHeight = h;
-        mNumKeys = (mHeight > mWidth) ? mNumPortraitKeys : mNumLandscapeKeys;
+        mNumKeys = ((mHeight * 1.25f) > mWidth) ? mNumPortraitKeys : mNumLandscapeKeys;
         mNumWhiteKeys = 0;
         // Count white keys.
         for (int i = 0; i < mNumKeys; i++) {
