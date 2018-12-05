@@ -25,6 +25,11 @@
     <string name="modulation_text">Modulation:</string>
     <string name="velocity_text">Velocity:</string>
     <string name="velocity_short_text">Vel.:</string>
+    <string name="oct_add">Oct+</string>
+    <string name="oct_sub">Oct-</string>
+    <string name="sustain_off">Sustain Off</string>
+    <string name="sustain_on">Sustain On</string>
+    <string name="togglebutton">ToggleButton</string>
 
     <string-array name="receivers">
         <item>"none"</item>

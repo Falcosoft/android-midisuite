@@ -133,7 +133,7 @@ public class MusicKeyboardView extends View {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         mWidth = w;
         mHeight = h;
-        mNumKeys = ((mHeight * 1.25f) > mWidth) ? mNumPortraitKeys : mNumLandscapeKeys;
+        mNumKeys = ((mHeight * 1.5f) > mWidth) ? mNumPortraitKeys : mNumLandscapeKeys;
         mNumWhiteKeys = 0;
         // Count white keys.
         for (int i = 0; i < mNumKeys; i++) {

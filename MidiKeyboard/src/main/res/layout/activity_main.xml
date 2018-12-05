@@ -55,7 +55,7 @@
         <SeekBar
             android:id="@+id/seekBar_velocity"
             style="@android:style/Widget.Material.SeekBar"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:max="127"
@@ -89,9 +89,9 @@
             android:layout_height="match_parent"
             android:layout_weight="0.81"
             android:checked="false"
-            android:text="ToggleButton"
-            android:textOff="Sustain Off"
-            android:textOn="Sustain On" />
+            android:text="@string/togglebutton"
+            android:textOff="@string/sustain_off"
+            android:textOn="@string/sustain_on" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,14 +113,14 @@
             android:layout_height="match_parent"
             android:layout_weight="0.1"
             android:onClick="onOctaveDown"
-            android:text="Oct-" />
+            android:text="@string/oct_sub" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
             android:onClick="onOctaveUp"
-            android:text="Oct+" />
+            android:text="@string/oct_add" />
     </LinearLayout>
 
     <LinearLayout
